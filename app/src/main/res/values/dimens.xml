@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- TODO -->
-    <dimen name="main_margin">30dp</dimen>
+    <dimen name="main_padding">20dp</dimen>
+    <dimen name="result_padding">10dp</dimen>
+    <dimen name="marginBottom">10dp</dimen>
 </resources>

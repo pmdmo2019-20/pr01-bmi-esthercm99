@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/main_activity_background"
     android:orientation="vertical"
+    android:padding="@dimen/main_padding"
     tools:context=".ui.main.MainActivity">
 
     <!-- TODO -->
@@ -21,7 +22,11 @@
         android:id="@+id/txtWeight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal" />
+        android:layout_marginBottom="@dimen/marginBottom"
+        android:hint="@string/hint_height"
+        android:inputType="numberDecimal">
+        <requestFocus/>
+    </EditText>
 
     <!-- Height -->
     <TextView
@@ -34,18 +39,39 @@
         android:id="@+id/txtHeight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/marginBottom"
+        android:hint="@string/hint_weight"
         android:inputType="numberDecimal" />
 
     <!-- Buttons-->
-    <Button
-        android:id="@+id/btnReset"
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnReset"/>
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnCalculate"/>
+    </LinearLayout>
+
+    <!-- Result -->
+    <TextView
+        android:id="@+id/lblResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btnReset"/>
-    <Button
-        android:id="@+id/btnCalculate"
+        android:padding="@dimen/result_padding"/>
+
+    <!-- Image -->
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btnCalculate"/>
+        android:src="@drawable/bmi"/>
 
 </LinearLayout>
