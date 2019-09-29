@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Body Mass Index</string>
     <!-- TODO -->
+    <string name="lblWeight">Weight</string>
+    <string name="lblHeight">Height</string>
+    <string name="btnReset">Reset</string>
+    <string name="btnCalculate">Calculate BMI</string>
 </resources>
