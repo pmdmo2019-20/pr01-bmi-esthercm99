@@ -7,4 +7,5 @@
     <string name="btnCalculate">Calculate BMI</string>
     <string name="hint_weight">(kg)</string>
     <string name="hint_height">(m)</string>
+    <string name="resultBMI">BMI %.1f %s</string>
 </resources>

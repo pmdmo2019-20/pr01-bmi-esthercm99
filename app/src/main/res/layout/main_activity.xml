@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/marginBottom"
-        android:hint="@string/hint_height"
+        android:hint="@string/hint_weight"
         android:inputType="numberDecimal">
         <requestFocus/>
     </EditText>
@@ -40,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/marginBottom"
-        android:hint="@string/hint_weight"
+        android:hint="@string/hint_height"
         android:inputType="numberDecimal" />
 
     <!-- Buttons-->
@@ -66,10 +66,14 @@
         android:id="@+id/lblResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
         android:padding="@dimen/result_padding"/>
 
     <!-- Image -->
     <ImageView
+        android:id="@+id/imageResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/bmi"/>

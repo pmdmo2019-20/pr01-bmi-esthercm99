@@ -12,6 +12,7 @@ public class BmiCalculator {
      */
     public float calculateBmi(float weightInKgs, float heightInMeters) {
         // TODO
+        return (float)(weightInKgs / Math.pow(heightInMeters, 2));
     }
 
 
@@ -21,6 +22,21 @@ public class BmiCalculator {
      */
     public BmiClasification getBmiClasification(float bmi) {
         // TODO
+        BmiClasification bmi_result = null;
+        if (bmi < 18.5) {
+            bmi_result = BmiClasification.LOW_WEIGHT;
+        } else if (bmi >= 18.5 && bmi <= 24.9) {
+            bmi_result = BmiClasification.NORMAL_WEIGHT;
+        } else if (bmi >= 25 && bmi <= 29.9) {
+            bmi_result = BmiClasification.OVERWWEIGHT;
+        } else if (bmi >= 30 && bmi <= 34.9) {
+            bmi_result = BmiClasification.OBESITY_GRADE_1;
+        } else if (bmi >= 35 && bmi <= 40) {
+            bmi_result = BmiClasification.OBESITY_GRADE_2;
+        } else if (bmi > 40) {
+            bmi_result = BmiClasification.OBESITY_GRADE_3;
+        }
+        return bmi_result;
     }
 
     public enum BmiClasification {
