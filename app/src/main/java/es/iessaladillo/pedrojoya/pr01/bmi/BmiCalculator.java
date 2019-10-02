@@ -12,9 +12,18 @@ public class BmiCalculator {
      */
     public float calculateBmi(float weightInKgs, float heightInMeters) {
         // TODO
-        return (float)(weightInKgs / Math.pow(heightInMeters, 2));
+        if (heightInMeters > 0.0f && weightInKgs > 0.0f) {
+            return (float)(weightInKgs / Math.pow(heightInMeters, 2.0f));
+        } else {
+            if (heightInMeters < 0) {
+                throw new IllegalArgumentException("Negative height");
+            } else if (weightInKgs < 0) {
+                throw new IllegalArgumentException("Negative weight");
+            } else {
+                throw new IllegalArgumentException("Negative weight and height");
+            }
+        }
     }
-
 
     /**
      * @param bmi Body mass index to get clasification from
@@ -22,24 +31,27 @@ public class BmiCalculator {
      */
     public BmiClasification getBmiClasification(float bmi) {
         // TODO
-        BmiClasification bmi_result = null;
-        if (bmi < 18.5) {
+        BmiClasification bmi_result;
+        if (bmi >= 0.00f && bmi < 18.50f) {
             bmi_result = BmiClasification.LOW_WEIGHT;
-        } else if (bmi >= 18.5 && bmi <= 24.9) {
+        } else if (bmi >= 18.50f && bmi <= 24.99f) {
             bmi_result = BmiClasification.NORMAL_WEIGHT;
-        } else if (bmi >= 25 && bmi <= 29.9) {
+        } else if (bmi >= 25.00f && bmi <= 29.99f) {
             bmi_result = BmiClasification.OVERWWEIGHT;
-        } else if (bmi >= 30 && bmi <= 34.9) {
+        } else if (bmi >= 30.00f && bmi <= 34.99f) {
             bmi_result = BmiClasification.OBESITY_GRADE_1;
-        } else if (bmi >= 35 && bmi <= 40) {
+        } else if (bmi >= 35.00f && bmi < 40.00f) {
             bmi_result = BmiClasification.OBESITY_GRADE_2;
-        } else if (bmi > 40) {
+        } else if (bmi >= 40.00f) {
             bmi_result = BmiClasification.OBESITY_GRADE_3;
+        } else {
+            bmi_result = BmiClasification.ERROR;
         }
+
         return bmi_result;
     }
 
     public enum BmiClasification {
-        LOW_WEIGHT, NORMAL_WEIGHT, OVERWWEIGHT, OBESITY_GRADE_1, OBESITY_GRADE_2, OBESITY_GRADE_3
+        ERROR, LOW_WEIGHT, NORMAL_WEIGHT, OVERWWEIGHT, OBESITY_GRADE_1, OBESITY_GRADE_2, OBESITY_GRADE_3
     }
 }

@@ -7,5 +7,13 @@
     <string name="btnCalculate">Calculate BMI</string>
     <string name="hint_weight">(kg)</string>
     <string name="hint_height">(m)</string>
-    <string name="resultBMI">BMI %.1f %s</string>
+    <string name="main_bmi">BMI %.1f %s</string>
+    <string name="main_invalid_weight">Invalid weight</string>
+    <string name="main_invalid_height">Invalid height</string>
+    <string name="main_underweight">UNDERWEIGHT</string>
+    <string name="main_normal_weight">NORMAL WEIGHT</string>
+    <string name="main_overweight">OVERWEIGHT</string>
+    <string name="main_obesity1">OBESITY GRADE 1</string>
+    <string name="main_obesity2">OBESITY GRADE 2</string>
+    <string name="main_obesity3">OBESITY GRADE 3</string>
 </resources>
